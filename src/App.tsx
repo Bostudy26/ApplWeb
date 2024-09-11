@@ -1,6 +1,6 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Highlights from './components/Highlights'
+import Navbar from './sections/Navbar'
+import Hero from './sections/Hero'
+import Highlights from './sections/Highlights'
 
 const App = () => {
   return (
