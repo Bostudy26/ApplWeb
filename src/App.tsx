@@ -3,7 +3,9 @@
 // import Highlights from './sections/Highlights'
 // import Model from './sections/Model'
 
-import Features from "./sections/Features"
+import HowItWorks from "./sections/HowItWorks"
+
+// import Features from "./sections/Features"
 
 const App = () => {
   return (
@@ -11,8 +13,9 @@ const App = () => {
       {/* <Navbar/>
       <Hero/>
       <Highlights/>
-      <Model/> */}
-      <Features/>
+      <Model/>
+      <Features/> */}
+      <HowItWorks/>
     </main>
   )
 }
