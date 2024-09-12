@@ -25,7 +25,7 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRationState, item
     >
         {/* Ambient Light */}
         <ambientLight 
-            intensity={10}
+            intensity={2}
         />
 
         <PerspectiveCamera
