@@ -16,6 +16,8 @@ const Model = () => {
     const cameraControlSmall = useRef();
     const cameraControlLarge = useRef();
 
+    const small = useRef(new THREE.Group())
+
 
     useGSAP(() => {
         gsap.to('#heading', {y: 0 , opacity: 1})
