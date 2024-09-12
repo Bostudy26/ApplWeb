@@ -1,4 +1,9 @@
-import { PerspectiveCamera, View } from "@react-three/drei"
+import { Loader, OrbitControls, PerspectiveCamera, View } from "@react-three/drei"
+import Lights from "./Lights"
+import Iphone from "./Iphone"
+import { Suspense } from "react"
+import CanvasLoader from "./Loading"
+
 
 interface ModelViewProps {
     index: number
@@ -15,7 +20,7 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRationState, item
     <View
         index={index}
         id={gsapType}
-        className={`border-2 border-red-500 w-full h-full
+        className={`w-full h-full
                 ${index === 2} ? 'right-[-100%] : ''
             `}
     >
@@ -28,6 +33,15 @@ const ModelView = ({ index, groupRef, gsapType, controlRef, setRationState, item
             makeDefault
             position={[0,0,4]}
         />
+        <Lights />
+
+        <OrbitControls/>
+        <group ref={groupRef}>
+            <Suspense fallback={<CanvasLoader/>}>
+                <Iphone/>
+            </Suspense>
+        </group>
+
     </View>
   )
 }
